@@ -2,7 +2,9 @@ import { uuid } from 'uuidv4';
 
 export class GeneralHelpers {
   generateRandomNumbers(length: number) {
-    return Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1));
+    return Math.floor(
+      Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1),
+    );
   }
 
   addHours(hour: number) {

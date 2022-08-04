@@ -14,10 +14,10 @@ async function bootstrap() {
 
   app.use(helmet());
   app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json({ limit: '50mb' }));
   app.use(morgan('dev'));
-  app.setGlobalPrefix('api');
   // handle all user input validation globally
-  app.useGlobalPipes(new ValidateInputPipe({ forbidUnknownValues: true }));
+  app.useGlobalPipes(new ValidateInputPipe());
   app.useGlobalInterceptors(new ResponseInterceptor());
 
   await app.listen(port, () => {
