@@ -12,7 +12,7 @@ import { GeneralHelpers } from '../../common/helpers/general.helpers';
 import { GoogleStrategy } from './strategies/google.strategy';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import * as dotenv from 'dotenv';
-import {LocalStrategy} from "./strategies/local.strategy";
+import { LocalStrategy } from './strategies/local.strategy';
 
 dotenv.config();
 

@@ -45,7 +45,7 @@ export class AuthController {
   @Get('google/redirect')
   async googleAuthRedirect(@Request() req, @Res() res) {
     const result = await this.authService.googleLogin(req);
-    if (result) return res.redirect(`${process.env.FRONTEND_URL}/dashboard`);
+    if (result) res.redirect(`${process.env.FRONTEND_URL}/dashboard`);
   }
 
   @UseGuards(JwtRefreshGuard)
