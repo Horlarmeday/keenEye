@@ -1,0 +1,11 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "cypress:open": "yarn run cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^10.4.0"
+  }
+}
